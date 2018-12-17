@@ -2,93 +2,73 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>说明项</title>
+	<title>Document</title>
 </head>
 <body>
-	<a href="http://www.baidu.com" target="_blank">这是百度</a>
-	<ul>
-		<li>1</li>
-		<li>2</li>
-		<li>3</li>
-		<li>4</li>
-	</ul>
-	<ol>
-		<li>a</li>
-		<li>b</li>
-		<li>c</li>
-	</ol>
-
-	<table  border="1">
-		<caption>表单</caption>
-		<tr>
-			<td  rowspan="2">1</td>
-			<td>2</td>
-			<td>3</td>
-		</tr>
-
-		<tr>
-			
-			<td>5</td>
-			<td>6</td>
-		</tr>
-
-		<tr>
-			<td>7</td>
-			<td>8</td>
-			<td>9</td>
-		</tr>
-	</table>
-
-
-	<table border="1">
-		<thead>
+<!-- 	<table border="1"  cellspacing="1"  cellpadding="15" width="450"  height="120"  >
 			<tr>
-			<td  rowspan="2">a</td>
-			<td>b</td>
-			<td>c</td>
+				<th>a</th>
+				<th>b</th>
+				<th>c</th>
 			</tr>
-
 			<tr>
-
-			<td>b1</td>
-			<td>c1</td>
+				<td>yyc</td>
+				<td>12</td>
+				<td >man</td>
 			</tr>
-		</thead>
-		<tbody>
 			<tr>
-			<td>d</td>
-			<td>e</td>
-			<td>f</td>	
+				<td>wzc</td>
+				<td>22</td>
+				<td>nv</td>
 			</tr>
-		</tbody>
-		<tfoot>
-			
 			<tr>
-			<td>g</td>
-			<td>h</td>
-			<td>j</td>	
-			</tr>
-		</tfoot>
-	</table>
+				<td  colspan="3">swr</td>
+				<!-- <td>23</td>
+				<td>nv</td> -->
+		<!-- 	</tr> --> 
 
 
-	<form>
-		<label for="ac">账号</label>
+			<input type="text" value="请输入名字" list="string" />
+			<datalist  id="string">
+				<option >yyc</option>
+				<option >wzc</option>
+				<option >swr</option>
+				<option >yxp</option>
+				<option >sj</option>
+				<!-- <option value=""></option> -->
+			</datalist>
 		
-		<input id="ac"  type="text" name="name" value="账号">
-		<br>
-		<input type="password" name="password" value="">
-		<br>
+			<fieldset>
+				<legend>用户登录</legend>
+				用户名: <input  type="text">
+				密  码: <input  type="password">
+			</fieldset>
 
-		<input type="radio" name="sex" value="">男
-		<input  type="radio"  name="sex"  value="">女
-		<br>
-		<input  type="checkbox" name="color"  value="">蓝色
-		<input  type="checkbox" name="color"  value="">黑色
-		<br>
-		<input type="button"  name=""  value="提交">
-	</form>
+		<fieldset>
+			<legend>html inpt新功能</legend>
+			<form action="">
+			email :<input type="email" />   <!-- 邮箱 --> </br>
+			phone :<input type="tel" />  <!-- 手机 -->    </br>
+			number:<input type="number" />  <!-- 数字 --> </br>
+			url   :<input type="url" />   <!-- url -->  </br>
+			search:<input type="search" />  <!-- search --> </br>
+			区域  : <input type="range" />   <!-- range --> </br>
+ 			<input type="submit">
+		</form>
+
+		用户名：<input type="text" placeholder="请输入用户名"  autofocus="autofocus"/> </br>
+		选择要上传的文件： <input type="file"  multiple />
+		<form action="">
+			名字：<input type="text"  name="userName" autocomplete="off" / >
+			<input type="submit">
+			
+		</form>
 
 
+
+		</fieldset>
+
+
+	</table>
 </body>
 </html>
