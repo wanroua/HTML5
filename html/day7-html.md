@@ -228,3 +228,171 @@
 </html>
 ```
 
+
+
+#### 属性选择器
+
+```bash
+实例：
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		a[title] {      /* a标签中带有title的全部颜色设置为红色*/
+			color:red;
+		}
+		input[type=text]{   /*指定input的类型为text都变为红色*/
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<a href="#" title="百度" >百度</a>
+	<a href="#" title="星朗" >新浪</a>
+	<a href="#" >头疼</a>
+	<input type="text"   value="ww">
+	<input type="submit" >
+	<input type="reset" >
+</body>
+</html>
+```
+
+#### 属性选择器(通配符)
+
+```bash
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div[class*=font]{     /*属性值分为： *:包含   ^:开头包含   $:结尾包含*/
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<div class="font32">w</div>
+	<div class="font32">w</div>
+	<div class="21font">w</div>
+	<div class="22font">//</div>
+	<div class="wfontw">zz</div>
+	<div class="wfontw">zz</div>
+</body>
+</html>
+```
+
+#### 伪元素选择器(CSS3)
+
+```html
+E::first-letter {   #内容第一个字被设置为红色
+	color:red;
+}
+E::first-line {
+	color:red;    #内容第一行被设置为红色，仅限第一行
+}
+E::selection {
+	color:red;   #鼠标选择的数据会显示为红色(默认蓝色)
+}
+#E是指定标签
+实例：
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		p::first-letter{
+			color:red;
+		}
+		p::first-line {
+			color : yellow;
+		}
+		p::selection {
+			color: green;
+		}
+	</style>
+</head>
+<body>
+<p>各位网站站长将网站接入YUNDUN前，需要将YUNDUN的高防CDN节点IP段加入白名单，以免YUNDUN安全加速服务被源服务器防火墙（或安全软件）或机房防火墙误判为攻击而进行拦截，影响网站的正常访问。
+各位网站站长将网站接入YUNDUN前，需要将YUNDUN的高防CDN节点IP段加入白名单，以免YUNDUN安全加速服务被源服务器防火墙（或安全软件）或机房防火墙误判为攻击而进行拦截，影响网站的正常访问</p>
+</body>
+</html>
+```
+
+
+
+#### 在标签内容中前面或后面增加内容
+
+```bash
+实例：
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div::before {       /* before:前面  */
+			content: "word";
+		}
+		div::after {        /* after:后面 */
+			content: " word";
+		}
+	</style>
+</head>
+<body>
+	<div>hello</div>
+</body>
+</html>
+#输出结果为  wordhello word
+```
+
+
+
+#### CSS书写规范
+
+```bash
+空格规范：
+[强制] 选择器与 {之间必须包含空格。
+示例：
+font-size: 12px; 
+#属性的:号后面跟值
+
+选择器规范
+[强制]当一个rule包含多个selector时，每个选择器声明必须独占一行
+
+实例：
+.post,
+.page,
+.comment {
+    line-height: 1.5;
+}
+
+[建议]：选择的嵌套层级应不大于3级，位置靠后的限定条件应尽可能精确
+
+
+[强制]属性定义后必须以分号结尾
+实例：
+.div {
+    margin: 0;
+}
+
+```
+
+
+
+#### CSS背景(background)
+
+| Background-color                                             | 背景颜色         |
+| ------------------------------------------------------------ | ---------------- |
+| Background-image                                             | 背景图片地址     |
+| Background-repeat                                            | 是否平铺         |
+| background-position                                          | 背景位置         |
+| background-attachment                                        | 背景固定还是滚动 |
+| 背景的合写(复合属性)                                         |                  |
+| Background:背景颜色、背景图片地址、背景平铺、背景滚动、背景位置 |                  |
+
+#### 背景图片(image)
+
